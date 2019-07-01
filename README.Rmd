@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# ElizabethWarrenMeme
+
+<!-- badges: start -->
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![CRAN status](https://www.r-pkg.org/badges/version/ElizabethWarrenMeme)](https://cran.r-project.org/package=ElizabethWarrenMeme)
+[![Travis build status](https://travis-ci.org/EmilHvitfeldt/ElizabethWarrenMeme.svg?branch=master)](https://travis-ci.org/EmilHvitfeldt/ElizabethWarrenMeme)
+[![Codecov test coverage](https://codecov.io/gh/EmilHvitfeldt/ElizabethWarrenMeme/branch/master/graph/badge.svg)](https://codecov.io/gh/EmilHvitfeldt/ElizabethWarrenMeme?branch=master)
+<!-- badges: end -->
+
+I resently came across this humorous [twitter thread](https://twitter.com/triciamatthew/status/1144051004352225281) about [Elizabeth Warren](https://en.wikipedia.org/wiki/Elizabeth_Warren). This package includes the fun responses and a function to access a a quotes.
+
+## Installation
+
+You can install the development version of ElizabethWarrenMeme from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("remotes")
+remotes::install_github("EmilHvitfeldt/ElizabethWarrenMeme")
+```
+
+## Example
+
+All the quotes are availiable with the `all_elizabeth_warren()` function
+
+```{r}
+library(ElizabethWarrenMeme)
+head(all_elizabeth_warren())
+```
+
+but if you are feeling adventuraous you can use the `elizabeth_warran()` to get a random quote,
+
+```{r}
+elizabeth_warran()
+```
+
+or specify a id to get a specific quote.
+
+```{r}
+elizabeth_warran(104)
+elizabeth_warran(107)
+elizabeth_warran(108)
+```
+
+## Code of Conduct
+
+Please note that the 'ElizabethWarrenMeme' project is released with a [Contributor Code of Conduct](.github/CODE_OF_CONDUCT.md). By contributing to this project, you agree to abide by its terms.
